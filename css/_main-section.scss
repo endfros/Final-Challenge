@@ -1,0 +1,341 @@
+body{
+    background-color: #FAFAFA;
+}
+
+.nav-link{
+    color:black;
+    padding: 20px;
+
+    &.active{
+        color: black;
+        font-weight: 700;
+    }
+}
+
+.header{
+    &__title{
+        font-weight: 700;
+        font-size: 20px;
+    }
+}
+
+.card{
+
+    &__timeline{
+        margin-top: 10px;
+        .card__text--top{
+            font-weight: 500;
+        }
+        .header__title{
+            font-size: 20px;
+        }
+    }
+
+    &__top{
+        position:relative;
+    }
+    &__img{
+        border-radius: 50%;
+        height:35px;
+        width: 35px;
+        position: relative;
+        border:1px solid lightgray;
+    }
+    &__imgs{
+        height:35px;
+        width: 35px;
+        position:relative;
+        &--enterprise{
+            border-radius: 8px;
+            height:35px;
+            width: 35px;
+            border: 2px solid lightgray;
+        }
+        &--profile{
+            border-radius: 50%;
+            border: 2px solid white;
+            position:absolute;
+            height: 25px;
+            width: 25px;
+            transform: translate(-15px,20px);
+        }
+    }
+    &__div{
+        &--imgs{
+            padding-top: 5px;
+            width: 35px;
+            display: inline-block;
+        }
+        &--img{
+            display: inline-block;
+            width: 35px;
+        }
+        &--imgheader{
+            display: inline-block;
+            width: 35px;
+            padding: 5px 0 0 5px;
+        }
+        &--text{
+            display: inline-block;
+            position: absolute;
+            margin: 0px 0 0 12px;
+            font-size: 12px;
+            font-family:  "Helvetica Neue", Arial, sans-serif;
+        }
+        &--textsing{
+            display: inline-block;
+            line-height: 5px;
+            position: absolute;
+            padding: 0 0 0 12px;
+        }
+    }
+
+    &__text{
+
+        &--profile{
+            margin-bottom: 0;
+            font-weight: 500;
+            color:rgb(64, 64, 64);
+        }
+
+
+        &--normal{
+            font-family:  "Helvetica Neue", Arial, sans-serif;
+            font-weight: 100;
+            // color: crimson;
+        }
+        
+        &--top{
+            display: inline-block;
+            text-decoration: none;
+            color:black;
+            margin-bottom: 5px;
+            &:hover{
+                background-color: rgb(242, 242, 242);
+                color:black;
+            }
+        }
+
+        &--topplural{
+            display: inline-block;
+            text-decoration: none;
+            color:black;
+            margin-bottom: 0px;
+            &:hover{
+                background-color: rgb(242, 242, 242);
+                color:black;
+            }
+        }
+
+        &--bottom{
+            line-height: 5px;
+            font-family:  "Helvetica Neue", Arial, sans-serif;
+            font-size: 10px;
+            font-weight: 100;
+            color: gray;
+            text-decoration: none;
+            &:hover{
+                color:black;
+            }
+        }
+    }
+
+    &__mid{
+        margin-top: 20px;
+        &--title{
+            text-decoration: none;
+            color:black;
+            &:hover{
+                color: rgb(46, 46, 151);
+            }
+        }
+    }
+
+    &__trend{
+        font-size: 15px;
+        padding: 10px 0;        
+    }
+
+    &__tag{
+        padding:0 8px;
+        border-radius: 5px;
+        display:inline-block;
+        padding:2px 7px;
+        border: 1px solid white;
+        font-family:  "Helvetica Neue", Arial, sans-serif;
+        color: black;
+        font-size: 12px;
+        font-weight: 100;
+        &--generic:hover{
+            background-color: lightgray;
+            border-color: none;
+        }
+        &--green:hover{
+            background-color: #f4fff7;
+            border-color: #1ad643;
+        }
+        &--cyan:hover{
+            background-color: #f4fffe;
+            border-color: #A2FFF1;
+        }
+        &--blue:hover{
+            background-color: rgb(241, 242, 255);
+            border-color: rgb(59, 73, 223);
+        }
+        &--purple:hover{
+            background-color: rgb(253, 246, 253);
+            border-color: purple;
+        }
+        &--red:hover{
+            background-color: rgb(255, 241, 241);
+            border-color: red;
+        }
+        &--orange:hover{
+            background-color: rgb(255, 243, 240);
+            border-color: rgb(255, 111, 0);
+        }
+        &--yellow:hover{
+            background-color: rgb(255, 255, 229);
+            border-color: rgb(225, 225, 0);
+        }
+        &--pink:hover{
+            background-color: rgb(255, 244, 252);
+            border-color: rgb(255, 0, 187);
+        }
+    }
+    &__hashtag{
+        &--green{
+            color: #1ad643;
+        }
+        &--cyan{
+            color: #A2FFF1;
+        }
+        &--blue{
+            color: rgb(59, 73, 223);
+        }
+        &--purple{
+            color: purple;
+        }
+        &--red{
+            color: red;
+        }
+        &--orange{
+            color: rgb(255, 111, 0);
+        }
+        &--yellow{
+            color: rgb(225, 225, 0);
+        }
+        &--pink{
+            color: rgb(255, 0, 187);
+        }
+    }
+
+    &__bottom{
+        &--icons{
+            display:inline-block;
+            width: 56%;
+            position:relative;
+        }
+        .card__item{
+            margin-left: 5px;
+            font-family: 'Helvetica Neue';
+            color:gray;
+            padding:0 5px;
+            text-decoration:none;
+            border-radius: 5px;
+            display:inline-block;
+            // padding:2px 7px;
+            &:hover{
+                background-color: rgb(242, 242, 242);
+            }
+            &:active{
+                text-decoration:none;
+            }
+
+            &--like{
+                display:none;
+            }
+        }
+        &--time{
+            color:gray;
+            font-family:  "Helvetica Neue", Arial, sans-serif;
+            font-size: 10px;
+            font-weight: 100;
+            
+        }
+        &--text{
+            display:none;
+            font-family:  "Helvetica Neue", Arial, sans-serif;
+            font-size: 12px;
+            font-weight: 100;
+        }
+        &--number{
+            font-family:  "Helvetica Neue", Arial, sans-serif;
+            font-size: 12px;
+            font-weight: 100;
+        }
+        &--btn{
+            margin-left: 5px;
+            background-color: lightgray;
+            border:none;
+            color:black;
+            font-size: 13px;
+            &:hover{
+                background-color: rgb(187, 187, 187);
+                color:black;
+            }
+        }
+    }
+}
+
+@media (min-width:768px) {
+    .card{
+        &__top{
+            margin-bottom: 10px;
+        }
+        &__text{
+            &--profile{
+                margin-bottom: 5px;
+            }
+            &--top{
+                margin-bottom: 0;
+            }
+        }
+        &__mid{
+            margin: 0 48px;
+        }
+        &__trend{
+            margin: 0 44px;
+        }
+        &__bottom{
+            margin: 0 0 0 40px;
+
+            &--icons{
+                width: 74%;
+            }
+            &--text{
+                display:inline
+            }
+        }
+    }
+}
+
+@media (min-width:1024px){
+    .card{
+        &__bottom{
+            &--icons{
+                width: 72%;
+            }
+        }
+    }
+}
+
+@media (min-width:1440px){
+    .card{
+        &__bottom{
+            &--icons{
+                width: 80%;
+            }
+        }
+    }
+}

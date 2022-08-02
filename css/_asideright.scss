@@ -1,0 +1,71 @@
+.profile{
+    font-size: 16px;
+}
+
+.list-group-item:hover{
+    background-color:white !important;
+    color: blue;
+
+}
+
+.text-dark{
+    position:relative; z-index:1;
+    border: 0;
+}
+
+.card-img1{
+    position: absolute; z-index: 2;
+   
+}
+
+.card-title-nick{
+    position: absolute; z-index: 3;
+    
+    margin-left: 35px;
+}
+
+.card-img-overlay{
+    border: 0 !important;
+    border-color: none !important; 
+}
+
+
+.btn btn-light{
+    align-items: center !important;
+    background-color: royalblue;
+}
+
+.card-link--n{
+    color: slateblue;
+    text-align: center;
+    text-decoration: none;
+}
+
+.cardimg{
+    width: 350px;
+    height: 150px;
+    align-items: center;
+}
+
+.list12{
+    font-size: 25px;
+    font-weight: bold;
+}
+
+
+.card-for{
+    height: 270px;
+    width: 380px;
+    border: 2px;
+    border-color: black;
+
+}
+
+.background-new{
+    background-color: #FCD34D;
+    color: #6f5604;
+}
+
+.container-aside{
+    max-width: 264px;
+}

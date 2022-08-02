@@ -1,0 +1,115 @@
+.profile-picture__img{
+        width: 33px;
+}
+
+.navbar--bg{
+    background-color:white;
+}
+
+.profile-picture__img{
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(206, 212, 218);
+}
+
+.profile-picture__img-2{
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(206, 212, 218);
+    width: 70px;
+}
+
+.form-control{
+    width: 400px;
+    padding-right: 50px;
+}
+
+.search-button{
+    background-color: transparent;
+    border-radius: 5px;
+    border-width: 1px;
+    border-style: none;
+    margin-left: -40px;
+}
+
+.button-create{
+    background-color: white;
+    border-radius: 5px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(59, 73, 223);
+    color: rgb(59, 73, 223);
+}
+.button-create:hover{
+    background-color: rgb(59, 73, 223);
+    color: white;
+    text-decoration: underline;
+}
+
+.offcanvas{
+    width: 90vw!important;
+}
+
+
+.card{
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(235, 235, 236);
+}
+
+.card-body{
+    font-size: 1rem;
+}
+
+.card-title{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.card-link{
+    font-size: 1.2rem;
+    font-weight: bolder;
+    text-decoration: none;
+    color: rgb(59, 73, 223);
+}
+
+.tags-icon:hover{
+    background-color: rgb(226, 227, 243);
+}
+
+.list-group{
+    list-style: none;
+    .list-group-item{
+        border-style: none;
+        font-weight: lighter;
+    }
+    .list-group-item:hover{
+        background-color: rgb(226, 227, 243);
+        color: rgb(59, 73, 223);
+        text-decoration: underline;
+    }
+}
+
+.side-button{
+    background-color: transparent;
+    border-style: none;
+    color: gray;
+    height: 50px;
+}
+
+.side-button:hover{
+    background-color: rgb(226, 227, 243);
+    color: rgb(59, 73, 223);
+    text-decoration: underline;
+}
+
+.aside-bottom{
+    background-color: #FAFAFA
+}
+
+.card-body-post{
+    border-style: solid;
+    border-radius: 5px;
+    border-color:#720000;
+    box-shadow: 3px 3px 0px #720000
+}

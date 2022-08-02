@@ -1,0 +1,51 @@
+a{
+    text-decoration: none;
+    color: rgb(59, 73, 223);
+}
+
+.follow-button{
+    background-color: rgb(59, 73, 223);
+    border-style: none;
+}
+
+.unicorn:hover{
+    .unicorn-icon:hover{
+        background-color: rgb(234, 244, 240);
+        fill: rgb(4, 151, 105);
+    }
+}
+
+
+.save:hover{
+    .save-icon:hover{
+        background-color: rgb(237, 236, 252);
+        fill: rgb(80, 70, 229);
+    }
+}
+
+
+.like:hover{
+    .like-icon:hover{
+        background-color: rgb(253, 234, 234);
+        fill: rgb(220, 38, 37);
+    }
+}
+
+.more:hover{
+    .more-icon:hover{
+        background-color: rgb(246, 246, 246);
+        fill: black;
+    }
+}
+
+.btn:hover{
+    border-style: none;
+}
+
+aside{
+    z-index: -1;
+}
+
+nav{
+    z-index: 2;
+}
