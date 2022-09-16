@@ -113,3 +113,11 @@
     border-color:#720000;
     box-shadow: 3px 3px 0px #720000
 }
+
+
+
+@media (min-width: 1200px) {
+    .navbar-container{
+        max-width: 1170px;
+    }
+  }

@@ -330,6 +330,10 @@ body {
   background-color: #FAFAFA;
 }
 
+.modal-content {
+  display: none;
+}
+
 .nav-link {
   color: black;
   padding: 20px;
@@ -612,6 +616,11 @@ body {
     display: inline;
   }
 }
+@media (min-width: 1200px) {
+  .main-container {
+    max-width: 1250px;
+  }
+}
 @media (min-width: 1024px) {
   .card__bottom--icons {
     width: 72%;
@@ -788,6 +797,11 @@ nav {
   box-shadow: 3px 3px 0px #720000;
 }
 
+@media (min-width: 1200px) {
+  .navbar-container {
+    max-width: 1170px;
+  }
+}
 * {
   font-family: "Roboto", sans-serif;
   font-weight: bold;
