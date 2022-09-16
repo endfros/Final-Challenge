@@ -2,6 +2,10 @@ body{
     background-color: #FAFAFA;
 }
 
+.modal-content{
+    display: none;
+}
+
 .nav-link{
     color:black;
     padding: 20px;
@@ -319,6 +323,12 @@ body{
         }
     }
 }
+
+@media (min-width: 1200px) {
+    .main-container{
+        max-width: 1250px;
+    }
+  }
 
 @media (min-width:1024px){
     .card{
