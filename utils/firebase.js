@@ -8,6 +8,7 @@ import {
     addDoc, 
     deleteDoc, 
     updateDoc, 
+    getDoc,
     getDocs, 
     collection,
     onSnapshot, 
@@ -30,23 +31,36 @@ const app = initializeApp(firebaseConfig);
 
 const db = getFirestore();
 
-const docRef = collection(db,"posts");
+const docRef = collection(db,"post");
 
+const docId = collection(db,"id");
+
+export const saveId = (idClicked) => {
+    addDoc(docId,{
+        id: idClicked
+    })
+}
+
+export const getId = () => getDocs(collection(db, 'id'));
 
 //Fetch document values
 
 //AddDoc tells firestore where to store the data, and as a parameter you put the collection, and what "bucket"
 
-export const getPosts = () => getDocs(collection(db,'posts'));
+export const getTasks = () => getDocs(collection(db,'post'));
 
-export const onGetPosts = (callback) => onSnapshot(collection(db,'posts'),callback);
+export const onGetTasks = (callback) => onSnapshot(collection(db,'post'),callback);
 
-export const deletePost = id => deleteDoc(doc(db,'posts',id));
+export const deleteTask = id => deleteDoc(doc(db,'post',id));
 
-export const savePost = (addTitle,addTags) => {
+export const savePost = (addTitle,addTags,addContent) => {
     addDoc(docRef,{
         title: addTitle,
-        tag: addTags
+        tag: addTags,
+        content: addContent
     })
 }
 
+export const getPost = (id) => getDoc(doc(db,'post',id));
+
+export const updatePost = (id,newFields) => updateDoc(doc(db,'post',id),newFields);

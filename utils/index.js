@@ -1,24 +1,26 @@
-import { savePost, onGetPosts, deletePost, getPosts } from "./firebase.js";
+import { savePost, onGetTasks, deleteTask, getTasks, getPost,updatePost,saveId } from "./firebase.js";
 
 const main = document.querySelector('.main-posts');
 const buttonCreate = document.querySelector('.button-create');
-const modal = document.querySelector('.modal-content')
+const modal = document.querySelector('.modal-content');
+let editStatus = false;
+let id = '';
+export let docId = '';
 
 window.addEventListener('DOMContentLoaded', async () => {
     // const querySnapshot = await getTasks()
-    onGetPosts((querySnapshot) => {
+    onGetTasks((querySnapshot) => {
 
         let html = '';
 
         querySnapshot.forEach(doc => {
-            console.log(doc.id)
 
             let title = doc.data().title;
             let tag = doc.data().tag;
 
             html += `
-                <a href="./post.html">
-                <article class="card">
+                <a href="" class="toPost">
+                <article class="card mb-3">
 
                 <div class="card-body">
     
@@ -42,7 +44,7 @@ window.addEventListener('DOMContentLoaded', async () => {
                     <!-- CARD TITLE -->
                     <div class="card__mid">
                     <a href="./post.html" class="card__mid--title"
-                        ><h2 class="header__title">
+                        ><h2 class="header__title toPost" id="${doc.id}">
                         ${title}
                         </h2></a
                     >
@@ -50,13 +52,13 @@ window.addEventListener('DOMContentLoaded', async () => {
             
                     <!-- CARD HASHTAGS -->
                     <div class="card__trend">
-                    <a href="#"><span class="card__tag card__tag--green"
+                    <a href="#"><span class="card__tag card__tag--green toPost"
                         ><span class="card__hashtag--green">#</span>${tag}</span
                     ></a>
                     </div>
             
                     <!-- CARD LIKES & COMMENTS -->
-                    <div class="card__bottom">
+                    <div class="card__bottom d-flex">
                     <div class="card__bottom--icons">
                         <a href="#" class="card__item">
                         <svg
@@ -94,7 +96,8 @@ window.addEventListener('DOMContentLoaded', async () => {
                         </a>
                     </div>
                     <span class="card__bottom--time">1 min read</span>
-                    <button class="btn btn-secondary card__bottom--btn">Save</button>
+                    <button class="btn btn-secondary card__bottom--btn edit" id="${doc.id}">Edit</button>
+                    <button class="btn btn-secondary card__bottom--btn delete" id="${doc.id}">Delete</button>
                     </div>
                 </div>
                 </article>
@@ -109,11 +112,49 @@ window.addEventListener('DOMContentLoaded', async () => {
     
         deleteButton.forEach(btn => {
             btn.addEventListener('click', (event) => {
-                deleteTask(event.target.id);
+                deleteTask(event.target.id);      
+            })
+        })
+
+        const editButton = document.querySelectorAll('.edit');
+
+        const toPost = document.querySelectorAll('.toPost');
+
+        toPost.forEach((btn) => {
+            btn.addEventListener('click', (e) => {
+
+                saveId(e.path[0].id);
+            })
+        })
+
+        // const toPost = document.querySelectorAll('.toPost');
+
+        // toPost.forEach((btn) => {
+        //     btn.addEventListener('mouseover', (e) => {
+        //         console.log(e.path[0].id)
+        //     })
+        // })
+
+        editButton.forEach((btn) => {
+            btn.addEventListener('click', async (e) => {
+                const doc = await getPost(e.target.id);   
+                console.log(doc.data()); 
+                modal.style.display = "block";
+                const title = document.querySelector('#title');
+                const tags = document.querySelector('#description');
+                const content = document.querySelector('#content');
+                title.value = doc.data().title;
+                tags.value = doc.data().tag;
+                content.value = doc.data().content;
+                editStatus = true;
+                id = doc.id;
             })
         })
     });
 });
+
+
+
 
 const close = document.querySelector('.modal-content__close');
 const add = document.querySelector('.modal-content__add');
@@ -121,27 +162,39 @@ const add = document.querySelector('.modal-content__add');
 buttonCreate.addEventListener('click', (event) => {
 
     // event.preventDefault(); // Prevents the default event of an element
-
-
-
     modal.style.display = "block";
+    editStatus = false;
 
 });
 
 close.addEventListener('click',()=>{
     modal.style.display = "none";
+    editStatus = false;
 });
+
+
 
 add.addEventListener('click',(event)=>{
     event.preventDefault()
     const title = document.querySelector('#title');
     const tags = document.querySelector('#description');
+    const content = document.querySelector('#content');
     
-
     if(!title.value.trim() && !tags.value.trim()){
         window.alert('No puedes ingresar una tarea en blanco!!');
     } else {
-        savePost(title.value,tags.value);
-        modal.style.display = "none";
+        if(!editStatus){
+            savePost(title.value,tags.value,content.value);
+            modal.style.display = "none";
+        } else {
+            updatePost(id, {
+                title: title.value,
+                tag: tags.value,
+                content: content.value
+            });
+            modal.style.display = "none";
+            editStatus = false;
+        }
     }
 });
+
