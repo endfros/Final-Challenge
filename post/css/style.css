@@ -1,0 +1,513 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    background-color: rgb(245, 245, 245, 1);
+}
+
+.devimg{
+    display: inline-block;
+    height: 45px;
+    width: 50px;
+    margin-left: 75px;
+    margin-top: 10px;
+}
+
+.create{
+    display: inline-block !important;
+    color: black;
+    font-size: 18px;
+    font-weight: bolder;
+    margin-right: 25px;
+    margin-left: 5px;
+    
+}
+
+.edit{
+    display: inline-block !important;
+    border-radius: 4px;
+    border: none;
+    margin-left: 680px;
+    transition: color 0.5s, background 0.5s;
+    background-color:transparent;
+    height: 40px;
+    width: 50px;
+}
+
+.edit:hover{
+    color: rgb(59, 73, 223);
+    background-color: rgb(195, 213, 246);
+    
+}
+
+.preview{
+    display: inline-block !important;
+    border-radius: 4px;
+    border: none;
+    transition: color 0.5s, background 0.5s;
+    background-color:transparent;
+    height: 40px;
+    width: 80px;
+   
+
+}
+
+.preview:hover{
+    color: rgb(59, 73, 223);
+    background-color: rgb(195, 213, 246);  
+}
+
+.containerpost{
+    width: 900px;
+    
+    height: 550px;
+    padding: 45px 20px;
+    margin-left:170px;
+    margin-top: 5px;
+    color: black;
+    background-color: white;
+    
+    
+}
+
+.contenido{
+    display: block;
+    height: 100px;
+    width: 660px;
+    border: none;
+    hanging-punctuation: 0;
+    background: transparent;
+    background-color: white;
+    font-size: 60px;
+    font-weight: bolder;
+    color: #515151;
+    outline: 0px;
+    
+}
+
+
+
+.contenido2{
+    height: 100px;
+    width: 660px;
+    border: none;
+    transition: none;
+    outline: 0px;
+}
+
+.adding-img{
+border-radius: 4px;
+display: inline-block;
+height: 50px;
+width: 200px;
+margin-left: 65px;
+background-color: white;
+box-shadow: 0 0 3px;
+border: transparent;
+}
+
+.publish{
+    margin-left: 170px;
+    color: white;
+    background-color: rgb(59, 73, 223);
+    border-radius: 4px;
+    border: none;
+    height: 40px;
+    width: 90px;
+    margin-top: 25px;
+    font-weight: bolder;
+    transition: color 0.5s, background 0.5s;
+    
+}
+
+.publish:hover{
+    color:  white;
+    background-color: rgb(46, 57, 180);
+}
+
+.savedraft{
+    margin-left: 5px;
+    color: black;
+    background-color: transparent;
+    border-radius: 4px;
+    border: none;
+    height: 40px;
+    width: 100px;
+    margin-top: 25px;
+    transition: color 0.5s, background 0.5s;
+}
+
+.savedraft:hover{
+    color: rgb(59, 73, 223);
+    background-color: rgb(195, 213, 246); 
+}
+
+.tuerca{
+    margin-left: 5px; 
+    background-color: transparent;
+    border-radius: 4px;
+    border: none;
+    height: 40px;
+    width: 50px;
+    margin-top: 25px;
+    transition: color 0.5s, background 0.5s;
+}
+
+.tuerca:hover{
+    color: rgb(59, 73, 223);
+    background-color: rgb(195, 213, 246); 
+}
+
+.revert{
+    margin-left: 5px; 
+    background-color: transparent;
+    border-radius: 4px;
+    border: none;
+    height: 50px;
+    width: 200px;
+    margin-top: 25px;
+    transition: color 0.5s, background 0.5s;
+}
+
+.revert:hover{
+    color: rgb(59, 73, 223);
+    background-color: rgb(195, 213, 246); 
+}
+
+
+.btn-btn-light1{
+    margin-left: 3px; 
+    background-color: transparent;
+    border-radius: 4px;
+    border: none;
+    height: 40px;
+    width: 40px;
+    margin-top: 3px;
+    transition: color 0.5s, background 0.5s;
+    
+}
+
+
+.btn-btn-light1:hover{
+    color: rgb(59, 73, 223);
+    background-color: rgb(195, 213, 246);
+}
+
+
+.bold{
+    display: none;
+    transition: all .8s background .8s;
+    color: white;
+    background-color: #272727;
+    height: 30px;
+    width: 150px;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+.btn-btn-light1:hover > figcaption{
+    display: block;
+    transition: all .5s;
+    color: white;
+    background-color: #272727;
+    
+    
+}
+
+
+.btn-btn-light2{
+    margin-left: 3px; 
+    background-color: transparent;
+    border-radius: 4px;
+    border: none;
+    height: 40px;
+    width: 40px;
+    margin-top: 3px;
+    transition: color 0.5s, background 0.5s;
+    
+}
+
+
+.btn-btn-light2:hover{
+    color: rgb(59, 73, 223);
+    background-color: rgb(195, 213, 246);
+}
+
+.italic{
+    display: none;
+    transition: all .8s background .8s;
+    color: white;
+    background-color: #272727;
+    height: 30px;
+    width: 150px;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+.btn-btn-light2:hover > figcaption{
+    display: block;
+    transition: all .5s;
+    color: white;
+    background-color: #272727;
+    
+}
+
+.btn-btn-light3{
+    margin-left: 3px; 
+    background-color: transparent;
+    border-radius: 4px;
+    border: none;
+    height: 40px;
+    width: 40px;
+    margin-top: 3px;
+    transition: color 0.5s, background 0.5s;
+    
+}
+
+
+.btn-btn-light3:hover{
+    color: rgb(59, 73, 223);
+    background-color: rgb(195, 213, 246);
+}
+
+
+.link{
+    display: none;
+    transition: all .8s background .8s;
+    color: white;
+    background-color: #272727;
+    height: 30px;
+    width: 150px;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+.btn-btn-light3:hover > figcaption{
+    display: block;
+    transition: all .5s;
+    color: white;
+    background-color: #272727;
+    
+}
+
+
+.btn-btn-light4{
+    margin-left: 3px; 
+    background-color: transparent;
+    border-radius: 4px;
+    border: none;
+    height: 40px;
+    width: 40px;
+    margin-top: 3px;
+    transition: color 0.5s, background 0.5s;
+    
+}
+
+
+.btn-btn-light4:hover{
+    color: rgb(59, 73, 223);
+    background-color: rgb(195, 213, 246);
+}
+
+
+.ordered{
+    display: none;
+    transition: all .8s background .8s;
+    color: white;
+    background-color: #272727;
+    height: 30px;
+    width: 150px;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+.btn-btn-light4:hover > figcaption{
+    display: block;
+    transition: all .5s;
+    color: white;
+    background-color: #272727;
+    
+}
+
+
+
+.btn-btn-light5{
+    margin-left: 3px; 
+    background-color: transparent;
+    border-radius: 4px;
+    border: none;
+    height: 40px;
+    width: 40px;
+    margin-top: 3px;
+    transition: color 0.5s, background 0.5s;
+    
+}
+
+
+.btn-btn-light5:hover{
+    color: rgb(59, 73, 223);
+    background-color: rgb(195, 213, 246);
+}
+
+.unordered{
+    display: none;
+    transition: all .8s background .8s;
+    color: white;
+    background-color: #272727;
+    height: 30px;
+    width: 150px;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+.btn-btn-light5:hover > figcaption{
+    display: block;
+    transition: all .5s;
+    color: white;
+    background-color: #272727;
+    
+}
+
+
+
+.btn-btn-light6{
+    margin-left: 3px; 
+    background-color: transparent;
+    border-radius: 4px;
+    border: none;
+    height: 40px;
+    width: 40px;
+    margin-top: 3px;
+    transition: color 0.5s, background 0.5s;
+    
+}
+
+
+.btn-btn-light6:hover{
+    color: rgb(59, 73, 223);
+    background-color: rgb(195, 213, 246);
+}
+
+
+.heading{
+    display: none;
+    transition: all .8s background .8s;
+    color: white;
+    background-color: #272727;
+    height: 30px;
+    width: 150px;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+.btn-btn-light6:hover > figcaption{
+    display: block;
+    transition: all .5s;
+    color: white;
+    background-color: #272727;
+    
+}
+
+
+
+
+
+.btn-btn-light7{
+    margin-left: 3px; 
+    background-color: transparent;
+    border-radius: 4px;
+    border: none;
+    height: 40px;
+    width: 40px;
+    margin-top: 3px;
+    transition: color 0.5s, background 0.5s;
+    
+}
+
+
+.btn-btn-light7:hover{
+    color: rgb(59, 73, 223);
+    background-color: rgb(195, 213, 246);
+}
+
+.quote{
+    display: none;
+    transition: all .8s background .8s;
+    color: white;
+    background-color: #272727;
+    height: 30px;
+    width: 150px;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+.btn-btn-light7:hover > figcaption{
+    display: block;
+    transition: all .5s;
+    color: white;
+    background-color: #272727;
+    
+}
+
+
+
+.btn-btn-light8{
+    margin-left: 3px; 
+    background-color: transparent;
+    border-radius: 4px;
+    border: none;
+    height: 40px;
+    width: 40px;
+    margin-top: 3px;
+    transition: color 0.5s, background 0.5s;
+    
+}
+
+
+.btn-btn-light8:hover{
+    color: rgb(59, 73, 223);
+    background-color: rgb(195, 213, 246);
+}
+
+
+
+.upload{
+    display: none;
+    transition: all .8s background .8s;
+    color: white;
+    background-color: #272727;
+    height: 30px;
+    width: 150px;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+.btn-btn-light8:hover > figcaption{
+    display: block;
+    transition: all .5s;
+    color: white;
+    background-color: #272727;
+    
+}
+
+.btn-btn-light9{
+    margin-left: 3px; 
+    background-color: transparent;
+    border-radius: 4px;
+    border: none;
+    height: 40px;
+    width: 40px;
+    margin-top: 3px;
+    transition: color 0.5s, background 0.5s;
+    
+}
+
+
+.btn-btn-light9:hover{
+    color: rgb(59, 73, 223);
+    background-color: rgb(195, 213, 246);
+}
+
