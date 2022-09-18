@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <img
+      class="devimg"
+      src="./assets/resized_logo_UQww2soKuUsjaOGNB38o.png"
+      alt=""
+    />
+
+    <p class="create">Create Post</p>
+    <button type="button" class="edit">Edit</button>
+    <button type="button" class="preview">Preview</button>
+
+    <section class="containerpost">
+      <button class="adding-img">Add a cover image</button>
+
+      <input
+        class="contenido"
+        type="text"
+        placeholder="New post title here..."
+        id="title"
+        required
+      />
+
+      <input
+        class="tags"
+        id="tags"
+        type="text"
+        placeholder="Add up to 4 tags"
+        required
+      />
+
+      <nav class="navbar bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <button
+              type="button"
+              class="btn-btn-light1"
+              style="font-size: 20px"
+            >
+              B
+              <figcaption class="bold">Bold CTRL +B</figcaption>
+            </button>
+
+            <button
+              type="button"
+              class="btn-btn-light2"
+              style="font-size: 20px"
+            >
+              I
+              <figcaption class="italic">Italic CRTL + I</figcaption>
+            </button>
+
+            <button type="button" class="btn-btn-light3">
+              <img src="./assets/icons8-enlazar-16.png" alt="" />
+              <figcaption class="link">Link CTRL + K</figcaption>
+            </button>
+
+            <button type="button" class="btn-btn-light4">
+              <img src="./assets/icons8-lista-numerada-26.png" alt="" />
+              <figcaption class="ordered">Ordered list</figcaption>
+            </button>
+
+            <button type="button" class="btn-btn-light5">
+              <img src="./assets/icons8-vista-general-3-30.png" alt="" />
+              <figcaption class="unordered">Unordered list</figcaption>
+            </button>
+
+            <button type="button" class="btn-btn-light6">
+              <img src="./assets/icons8-h-26.png" alt="" />
+              <figcaption class="heading">Heading</figcaption>
+            </button>
+
+            <button type="button" class="btn-btn-light7">
+              <img src="./assets/icons8-quote-left-24.png" alt="" />
+              <figcaption class="quote">Quote</figcaption>
+            </button>
+
+            <button type="button" class="btn-btn-light8">
+              <img src="./assets/icons8-picture-48.png" alt="" />
+              <figcaption class="upload">Upload image</figcaption>
+            </button>
+
+            <button
+              type="button"
+              class="btn-btn-light9"
+              style="margin-left: 380px"
+            >
+              <img src="./assets/icons8-menú-2-24.png" alt="" />
+            </button>
+          </a>
+        </div>
+      </nav>
+
+      <input
+        class="contenido2"
+        type="text"
+        placeholder="Write your post content here..."
+        id="content"
+        required
+      />
+    </section>
+
+    <article>
+      <button class="publish" id="btnAdd">Publish</button>
+      <button class="savedraft">Save draft</button>
+      <button class="tuerca">
+        <img src="./assets/icons8-production-order-32.png" alt="" />
+      </button>
+      <button class="revert">Revert new changes</button>
+    </article>
+    <script src="./js/index.js" type="module"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+      integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

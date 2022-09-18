@@ -88,6 +88,19 @@ body{
     
 }
 
+.tags{
+    display: block;
+    height: 100px;
+    width: 660px;
+    border: none;
+    hanging-punctuation: 0;
+    background: transparent;
+    background-color: white;
+    color: #515151;
+    outline: 0px;
+    
+}
+
 
 
 .contenido2{

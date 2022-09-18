@@ -102,7 +102,9 @@ window.addEventListener("DOMContentLoaded", async () => {
                         </a>
                     </div>
                     <span class="card__bottom--time">1 min read</span>
-                    <button class="btn btn-secondary card__bottom--btn" id="btn-Edit${doc.id}">Edit</button>
+                    <a href="./post/createPost.html?id=${doc.id}" class="btn btn-secondary card__bottom--btn">
+                    Edit
+                    </a>
                     <button class="btn btn-secondary card__bottom--btn" id="btn-Delete${doc.id}">Delete</button>
                     </div>
                 </div>
@@ -144,9 +146,8 @@ window.addEventListener("DOMContentLoaded", async () => {
         let realId = btn.id.split("btn-Edit")[1];
         const doc = await getPost(realId);
         // console.log(doc.data());
-        modal.style.display = "block";
         const title = document.querySelector("#title");
-        const tags = document.querySelector("#description");
+        const tags = document.querySelector("#tags");
         const content = document.querySelector("#content");
         title.value = doc.data().title;
         tags.value = doc.data().tag;
@@ -159,7 +160,6 @@ window.addEventListener("DOMContentLoaded", async () => {
 });
 
 const close = document.querySelector(".modal-content__close");
-const add = document.querySelector(".modal-content__add");
 
 buttonCreate.addEventListener("click", (event) => {
   // event.preventDefault(); // Prevents the default event of an element
@@ -170,28 +170,4 @@ buttonCreate.addEventListener("click", (event) => {
 close.addEventListener("click", () => {
   modal.style.display = "none";
   editStatus = false;
-});
-
-add.addEventListener("click", (event) => {
-  event.preventDefault();
-  const title = document.querySelector("#title");
-  const tags = document.querySelector("#description");
-  const content = document.querySelector("#content");
-
-  if (!title.value.trim() && !tags.value.trim()) {
-    window.alert("No puedes ingresar una tarea en blanco!!");
-  } else {
-    if (!editStatus) {
-      savePost(title.value, tags.value, content.value);
-      modal.style.display = "none";
-    } else {
-      updatePost(id, {
-        title: title.value,
-        tag: tags.value,
-        content: content.value,
-      });
-      modal.style.display = "none";
-      editStatus = false;
-    }
-  }
 });
