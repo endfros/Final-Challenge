@@ -1,22 +1,26 @@
-import { savePost, onGetTasks, deleteTask, getTasks,getId } from "./firebase.js";
+import {
+  savePost,
+  onGetTasks,
+  deleteTask,
+  getTasks,
+  getId,
+  getPost,
+} from "./firebase.js";
 
-const main = document.querySelector('.main-post');
+const main = document.querySelector(".main-post");
+const params = new URLSearchParams(window.location.search);
+window.addEventListener("DOMContentLoaded", async () => {
+  // const querySnapshot = await getTasks()
 
+  const doc = await getPost(params.get("id"));
 
-window.addEventListener('DOMContentLoaded', async () => {
-    // const querySnapshot = await getTasks()
-    onGetTasks((querySnapshot) => {
+  let title = doc.data().title;
+  let tag = doc.data().tag;
+  let content = doc.data().content;
 
-        let html = '';
+  let html = "";
 
-        querySnapshot.forEach(doc => {
-            console.log(doc.id)
-
-            let title = doc.data().title;
-            let tag = doc.data().tag;
-            let content = doc.data().content;
-
-            html += `
+  html += `
             <main class="container main-post m-0 p-0 overflow-hidden">
 
             <div class="card p-md-5">
@@ -45,7 +49,6 @@ window.addEventListener('DOMContentLoaded', async () => {
                     </h2>
                   </div>
                 </section>
-
 
                 <!-- */ # section */  -->
                 <section class="container-fluid p-0">
@@ -82,10 +85,6 @@ window.addEventListener('DOMContentLoaded', async () => {
                   </div>
                 </div>
               </section>
-
-
-
-
 
             </div>
 
@@ -151,18 +150,7 @@ window.addEventListener('DOMContentLoaded', async () => {
                 </div>
               </section>
             </div>
-            `
+            `;
 
-        });
-
-        main.innerHTML=html;
-    
-        const deleteButton = document.querySelectorAll('.delete');
-    
-        deleteButton.forEach(btn => {
-            btn.addEventListener('click', (event) => {
-                deleteTask(event.target.id);      
-            })
-        })
-    });
+  main.innerHTML = html;
 });
