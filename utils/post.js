@@ -9,7 +9,6 @@ import {
 
 const main = document.querySelector(".main-post");
 const params = new URLSearchParams(window.location.search);
-
 window.addEventListener("DOMContentLoaded", async () => {
   // const querySnapshot = await getTasks()
 
@@ -20,8 +19,6 @@ window.addEventListener("DOMContentLoaded", async () => {
   let content = doc.data().content;
 
   let html = "";
-
-  console.log(title, tag, content);
 
   html += `
             <main class="container main-post m-0 p-0 overflow-hidden">
