@@ -17,23 +17,30 @@
 
   <body>
 
-    <div class="d-flex justify-content-center align-items-center p-1">
-      <a href="../index.html">       
-         <img
-        class="devimg"
-        src="./assets/resized_logo_UQww2soKuUsjaOGNB38o.png"
-        alt=""
-      /></a>
+    <nav class="d-flex justify-content-between align-items-center">
+      <div class="d-flex justify-content-start align-items-center">
+        <a href="../index.html">       
+          <img
+         class="devimg"
+         src="./assets/resized_logo_UQww2soKuUsjaOGNB38o.png"
+         alt=""
+       /></a>
+       <p class="create">Create Post</p>
+      </div>
 
+      <div class="">
+        <button type="button" class="edit">Edit</button>
+        <button type="button" class="preview">Preview</button>
+      </div>
 
-      <p class="create">Create Post</p>
-      <button type="button" class="edit">Edit</button>
-      <button type="button" class="preview">Preview</button>
-      <a href="../index.html">
-        <button type="button" class="preview ms-5 p-0">X</button>
+      <a class="" href="../index.html">
+        <button type="button" class="preview">X</button>
       </a>
+    </nav>
 
-    </div>
+
+
+
 
     <div class="d-flex flex-column align-items-center">
       <section class="containerpost rounded">
@@ -66,9 +73,9 @@
           required
         />
   
-        <nav class="navbar bg-light">
+        <nav class="d-flex navbar bg-light">
           <div class="container-fluid">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand d-flex" href="#">
               <button
                 type="button"
                 class="btn-btn-light1"
@@ -120,7 +127,6 @@
               <button
                 type="button"
                 class="btn-btn-light9"
-                style="margin-left: 380px"
               >
                 <img src="./assets/icons8-menú-2-24.png" alt="" />
               </button>
@@ -141,8 +147,9 @@
       </section>
 
     </div>
-    <div class="d-flex justify-content-center">
-      <article class="container-buttons ">
+
+    <div class="">
+      <article class="container-buttons d-flex align-items-center">
         <button class="publish" id="btnAdd">Publish</button>
         <button class="savedraft">Save draft</button>
         <button class="tuerca">

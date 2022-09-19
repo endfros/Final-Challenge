@@ -36,7 +36,7 @@ add.addEventListener("click", (event) => {
     }
   }
   let redirect = () => window.location.assign("../index.html");
-  setTimeout(redirect, 1100);
+  setTimeout(redirect, 1800);
 });
 
 const image_input = document.querySelector("#image-input");

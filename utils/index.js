@@ -10,7 +10,6 @@ import {
 
 const main = document.querySelector(".main-posts");
 const buttonCreate = document.querySelector(".button-create");
-const modal = document.querySelector(".modal-content");
 let editStatus = false;
 let id = "";
 export let docId = "";
@@ -105,8 +104,23 @@ window.addEventListener("DOMContentLoaded", async () => {
                     <a href="./post/createPost.html?id=${doc.id}" class="btn btn-secondary card__bottom--btn">
                     Edit
                     </a>
-                    <button class="btn btn-secondary card__bottom--btn" id="btn-Delete${doc.id}">Delete</button>
+                    <button class="btn btn-secondary card__bottom--btn"  id="btn-Delete${doc.id}">Delete</button>
+        
                     </div>
+                  
+                  <div id="myModal" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                      <div class="d-flex">
+                      <p class="fs-2">Are you sure you want to delete this post?</p>
+                      <button class="close btn">X</button>
+                      </div>
+                      <button class="confirma btn  btn-danger">Yes!!!!</button>
+                    </div>
+
+                  </div>
+
                 </div>
                 </article>
             </a>
@@ -115,11 +129,24 @@ window.addEventListener("DOMContentLoaded", async () => {
 
     main.innerHTML = html;
 
+    const confirma = document.querySelector('.confirma');
     const deleteButton = document.querySelectorAll('[id ^= "btn-Delete"]');
+    var modal = document.getElementById("myModal");
+    var span = document.getElementsByClassName("close")[0];
+
     deleteButton.forEach((btn) => {
       btn.addEventListener("click", () => {
-        let realId = btn.id.split("btn-Delete")[1];
-        deleteTask(realId);
+        // let realId = btn.id.split("btn-Delete")[1];
+        // deleteTask(realId);
+        confirma.onclick = function() {
+          let realId = btn.id.split("btn-Delete")[1];
+          deleteTask(realId);
+        }
+        console.log(btn.id.split("btn-Delete")[1])
+        modal.style.display = "block";
+        span.onclick = function() {
+        modal.style.display = "none";
+        } 
       });
     });
 
@@ -164,4 +191,5 @@ buttonCreate.addEventListener("click", (event) => {
   modal.style.display = "block";
   editStatus = false;
 });
+
 
