@@ -6,6 +6,7 @@ body{
     display: none;
 }
 
+
 .nav-link{
     color:black;
     padding: 20px;
@@ -290,6 +291,10 @@ body{
             }
         }
     }
+}
+
+.side-button:active{
+    background-color: white !important;
 }
 
 @media (min-width:768px) {

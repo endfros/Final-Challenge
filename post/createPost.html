@@ -11,7 +11,8 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="./css/style.css" />
-    <title>Document</title>
+    <link rel="icon" type="image/x-icon" href="https://res.cloudinary.com/practicaldev/image/fetch/s--E8ak4Hr1--/c_limit,f_auto,fl_progressive,q_auto,w_32/https://dev-to.s3.us-east-2.amazonaws.com/favicon.ico">
+    <title>New Post - DEV Community 👩‍💻👨‍💻</title>
   </head>
 
   <body>
@@ -36,7 +37,18 @@
 
     <div class="d-flex flex-column align-items-center">
       <section class="containerpost rounded">
-        <button class="adding-img">Add a cover image</button>
+        <div class="d-flex align-items-center">
+          <label for="image-input" class="btn btn-outline-secondary text-dark add-img p-2 mb-2 order-1">
+            <i class="fa fa-cloud-upload"></i> Add a cover image
+          </label>
+          <label for="image-input" class="btn btn-outline-secondary text-dark change-img p-2 mb-2 mx-3 order-3">
+            <i class="fa fa-cloud-upload"></i> Change
+          </label>
+          <input class="" type="file" id="image-input" accept="image/jpeg, image/png, image/jpg">
+          <button class="btn btn-outline-danger remove-img p-2 mb-2 mx-3 order-4">Remove</button>
+          <div id="display-image" class="order-2 mx-5 ps-3"></div>
+        </div>
+
   
         <input
           class="contenido"

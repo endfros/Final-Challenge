@@ -24,6 +24,26 @@ body{
     margin-left: 4px;
 }
 
+#display-image{
+    width: 180px;
+    height: 100px;
+    border: none;
+    background-position: center;
+    background-size: cover;
+  }
+
+input[type="file"] {
+    display: none;
+}
+
+.btn{
+    border-width: 2px;
+}
+
+.btn:hover{
+    background-color: rgb(244, 244, 244);
+}
+
 .edit{
     display: inline-block !important;
     border-radius: 4px;
@@ -102,7 +122,7 @@ body{
 
 
 .contenido2{
-    height: 450px;
+    height: 400px;
     margin-top: 20px;
     width: 860px;
     border: none;

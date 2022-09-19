@@ -590,6 +590,10 @@ body {
   color: black;
 }
 
+.side-button:active {
+  background-color: white !important;
+}
+
 @media (min-width: 768px) {
   .card__top {
     margin-bottom: 10px;
