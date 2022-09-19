@@ -13,7 +13,6 @@ body{
     height: 45px;
     width: 50px;
     margin-left: 75px;
-    margin-top: 10px;
 }
 
 .create{
@@ -21,9 +20,8 @@ body{
     color: black;
     font-size: 18px;
     font-weight: bolder;
-    margin-right: 25px;
-    margin-left: 5px;
-    
+    margin-bottom: 0;
+    margin-left: 4px;
 }
 
 .edit{
@@ -51,8 +49,6 @@ body{
     background-color:transparent;
     height: 40px;
     width: 80px;
-   
-
 }
 
 .preview:hover{
@@ -62,15 +58,17 @@ body{
 
 .containerpost{
     width: 900px;
-    
-    height: 550px;
+    height: 85vh;
     padding: 45px 20px;
-    margin-left:170px;
     margin-top: 5px;
     color: black;
     background-color: white;
     
-    
+}
+
+.container-buttons{
+    width: 900px;
+    margin-right: 350px;
 }
 
 .contenido{
@@ -104,22 +102,23 @@ body{
 
 
 .contenido2{
-    height: 100px;
-    width: 660px;
+    height: 450px;
+    margin-top: 20px;
+    width: 860px;
     border: none;
     transition: none;
     outline: 0px;
+    resize: none;
 }
 
 .adding-img{
-border-radius: 4px;
-display: inline-block;
-height: 50px;
-width: 200px;
-margin-left: 65px;
-background-color: white;
-box-shadow: 0 0 3px;
-border: transparent;
+    border-radius: 4px;
+    display: inline-block;
+    height: 50px;
+    width: 200px;
+    background-color: white;
+    box-shadow: 0 0 3px;
+    border: transparent;
 }
 
 .publish{

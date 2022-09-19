@@ -32,5 +32,5 @@ add.addEventListener("click", (event) => {
     }
   }
   let redirect = () => window.location.assign("../index.html");
-  setTimeout(redirect, 1000);
+  setTimeout(redirect, 1100);
 });

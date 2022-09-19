@@ -159,15 +159,9 @@ window.addEventListener("DOMContentLoaded", async () => {
   });
 });
 
-const close = document.querySelector(".modal-content__close");
-
 buttonCreate.addEventListener("click", (event) => {
   // event.preventDefault(); // Prevents the default event of an element
   modal.style.display = "block";
   editStatus = false;
 });
 
-close.addEventListener("click", () => {
-  modal.style.display = "none";
-  editStatus = false;
-});
