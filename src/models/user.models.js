@@ -36,7 +36,7 @@ const userSchema = new mongoose.Schema({
             minLenght: 3,
             maxLenght: 20,
             trim: true,
-            default: none
+            default: 'none'
         },
         img:{
             type: String,

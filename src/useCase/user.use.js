@@ -1,4 +1,4 @@
-import {User} from '../models/koders.models.js'
+import {User} from '../models/user.models.js'
 import bcrypt from '../libs/bcrypt.js'
 
 function getAll(){
